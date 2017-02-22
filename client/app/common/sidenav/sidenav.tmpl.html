@@ -1,0 +1,35 @@
+<md-toolbar class="md-theme-indigo">
+    <h1 class="md-toolbar-tools">Sidenav Left</h1>
+    <md-button class="md-icon-button sidebar-left-icon" ng-click="$ctrl.toggleIconMenu()" aria-label="Open side menu">
+        <md-icon md-font-icon ng-class="{ 'zmdi zmdi-chevron-right' : $ctrl.layout.sideMenuSize == 'icon', 'zmdi zmdi-chevron-left' : $ctrl.layout.sideMenuSize == 'full' }"></md-icon>
+    </md-button>
+</md-toolbar>
+<md-content layout-padding>
+    <md-list>
+        <md-list-item>
+            <md-button ng-class="{'selected' : user === $ctrl.selected }">
+                TEST
+            </md-button>
+        </md-list-item>
+        <md-list-item>
+            <md-button ng-class="{'selected' : user === $ctrl.selected }">
+                TEST
+            </md-button>
+        </md-list-item>
+        <md-list-item>
+            <md-button ng-class="{'selected' : user === $ctrl.selected }">
+                TEST
+            </md-button>
+        </md-list-item>
+        <md-list-item>
+            <md-button ng-class="{'selected' : user === $ctrl.selected }">
+                TEST
+            </md-button>
+        </md-list-item>
+        <md-list-item>
+            <md-button ng-class="{'selected' : user === $ctrl.selected }">
+                TEST
+            </md-button>
+        </md-list-item>
+    </md-list>
+</md-content>

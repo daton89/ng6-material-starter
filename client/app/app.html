@@ -1,0 +1,31 @@
+<!-- left sidenav -->
+<md-sidenav md-component-id="left" class="md-sidenav-left md-whiteframe-z2" ng-if="layout.leftSideMenuSize !== 'off'" md-is-locked-open="layout.leftSideMenuSize === 'full' && $mdMedia('gt-sm')">
+  <sidenav></sidenav>
+</md-sidenav>
+
+<!-- Container -->
+<div flex layout="column" flex>
+
+  <!-- top toolbar -->
+  <md-toolbar layout="row" layout-align="space-between center" class="md-toolbar-tools">
+    <md-button class="md-fab" ng-click="$ctrl.lockLeft=!$ctrl.lockLeft">
+      <i class="fa {{ $ctrl.lockLeft ? 'fa-arrow-left' : 'fa-bars' }}"></i>
+    </md-button>
+    <h1>Angular Material - Starter App </h1>
+    <md-button class="md-fab" ng-click="$ctrl.toggleRight()">
+      <i class="fa {{ $ctrl.lockRight ? 'fa-arrow-right' : 'fa-bars' }}"></i>
+    </md-button>
+  </md-toolbar>
+
+  <!-- content component -->
+  <md-content flex id="content" ui-view>
+    Loading content...
+  </md-content>
+
+</div>
+
+<!-- right sidenav -->
+<md-sidenav md-component-id="right" class="md-sidenav-right md-whiteframe-z2" ng-if="layout.rightSideMenuSize !== 'off'"
+  md-is-locked-open="$ctrl.lockRight && $mdMedia('gt-sm')">
+  <sidenav></sidenav>
+  </md-sidenav>
