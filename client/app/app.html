@@ -8,11 +8,11 @@
 
   <!-- top toolbar -->
   <md-toolbar layout="row" layout-align="space-between center" class="md-toolbar-tools">
-    <md-button class="md-fab" ng-click="$ctrl.lockLeft=!$ctrl.lockLeft">
+    <md-button class="md-fab" ng-click="$ctrl.lockLeft=!$ctrl.lockLeft" aria-label="toggle left sidenav">
       <i class="fa {{ $ctrl.lockLeft ? 'fa-arrow-left' : 'fa-bars' }}"></i>
     </md-button>
     <h1>Angular Material - Starter App </h1>
-    <md-button class="md-fab" ng-click="$ctrl.toggleRight()">
+    <md-button class="md-fab" ng-click="$ctrl.toggleRight()" aria-label="toggle right sidenav">
       <i class="fa {{ $ctrl.lockRight ? 'fa-arrow-right' : 'fa-bars' }}"></i>
     </md-button>
   </md-toolbar>

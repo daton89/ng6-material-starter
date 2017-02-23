@@ -1,19 +1,25 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
+import ngMaterial from 'angular-material';
+import 'font-awesome/css/font-awesome.css';
+import 'material-design-icons';
+import 'angular-material/angular-material.css';
+import 'normalize.css';
+
+//////////////////////////////////////////////////
+
+import Material from './material/material'
 import Common from './common/common';
 import Components from './components/components';
 import AppComponent from './app.component';
-import ngMaterial from 'angular-material';
-require('font-awesome/css/font-awesome.css');
-require('material-design-icons');
 
-// Material design css
-import 'angular-material/angular-material.css';
-import 'normalize.css';
+
+
 
 angular.module('app', [
   ngMaterial,
   uiRouter,
+  Material,
   Common,
   Components
 ])
