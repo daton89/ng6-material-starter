@@ -22,10 +22,10 @@ class AppController {
         }
 
         function buildToggler(navID) {
-            var debounceFn = $mdUtil.debounce(function () {
+            var debounceFn = $mdUtil.debounce(function() {
                 $mdSidenav(navID)
                     .toggle()
-                    .then(function () {
+                    .then(function() {
                         $log.debug("toggle " + navID + " is done");
                     });
             }, 300);
@@ -37,10 +37,10 @@ class AppController {
 
             $scope.layout[componentId + 'SideMenuSize'] = !$mdSidenav(componentId).isOpen() ? 'full' : 'hidden';
 
-            var debounceFn = $mdUtil.debounce(function () {
+            var debounceFn = $mdUtil.debounce(function() {
                 $mdSidenav(componentId)
                     .toggle()
-                    .then(function () {
+                    .then(function() {
                         $log.debug(`${componentId} is ${$mdSidenav(componentId).isOpen()}`);
                     });
             }, 300);
@@ -48,8 +48,8 @@ class AppController {
             return debounceFn();
 
             $mdSidenav(componentId).toggle();
-            $log.debug('isOpen?', $mdSidenav(componentId).isOpen());
-            $log.debug('isLockedOpen?', $mdSidenav(componentId).isLockedOpen());
+            // $log.debug('isOpen?', $mdSidenav(componentId).isOpen());
+            // $log.debug('isLockedOpen?', $mdSidenav(componentId).isLockedOpen());
         }
 
     }
