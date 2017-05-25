@@ -1,6 +1,4 @@
-# Fork of NG6-Starter of AngularClass plus angular-material
-
-woring on readme...
+# NG6-Material-Starter of AngularClass plus angular-material
 
 > The de facto starter repo for building scalable apps with [Angular](https://angularjs.org), [ES6](https://git.io/es6features), and [Webpack](http://webpack.github.io/)
 
