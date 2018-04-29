@@ -16,12 +16,23 @@ module.exports = {
                 // Rename the file using the asset hash
                 // Pass along the updated reference to your code
                 // You can add here any file extension you want to get copied to your output
-                test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)([\?]?.*)$/,
+                test: /\.(png|jpg|jpeg|gif)([\?]?.*)$/,
                 loader: 'file'
             },
             { test: /\.html$/, loader: 'raw' },
             { test: /\.(scss|sass)$/, loader: 'style!css!sass' },
-            { test: /\.css$/, loader: 'style!css' }
+            { test: /\.css$/, loader: 'style!css' },
+            {
+                test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'fonts/', // where the fonts will go
+                        publicPath: '../' // override the default path
+                    }
+                }]
+            }
         ]
     },
     plugins: [
