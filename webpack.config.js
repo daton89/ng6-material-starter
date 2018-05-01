@@ -8,7 +8,7 @@ module.exports = {
     module: {
 
         loaders: [
-            { test: /\.js$/, exclude: [/app\/lib/, /node_modules/], loader: 'ng-annotate!babel' },
+            { test: /\.js$/, exclude: [/app\/lib/, /node_modules/], loader: 'ng-annotate!babel-loader' },
             {
                 // ASSET LOADER
                 // Reference: https://github.com/webpack/file-loader
@@ -20,8 +20,8 @@ module.exports = {
                 loader: 'file'
             },
             { test: /\.html$/, loader: 'raw' },
-            { test: /\.(scss|sass)$/, loader: 'style!css!sass' },
-            { test: /\.css$/, loader: 'style!css' },
+            { test: /\.(scss|sass)$/, loader: 'style-loader!css-loader!sass-loader' },
+            { test: /\.css$/, loader: 'style-loader!css-loader' },
             {
                 test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
                 use: [{
